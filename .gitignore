@@ -1,52 +1,25 @@
-# Prerequisites
-*.d
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
 
-# Linker output
-*.ilk
-*.map
-*.exp
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+int main(){
+	int liczba;
+	int i = 2;
+	printf("Podaj liczbe: ");
+  	scanf( "%i", &liczba);
+  	
+  		long r = sqrt(liczba);
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+	if (liczba==1) printf("\n 1 nie jest liczba ani zlozona ani pierwsza");
+	for (int i=2;i<=r;i++);
+	if (liczba%i!=0 && liczba!=1) printf(" to liczba pierwsza.");  
+	else 
+	 printf(" to liczba zlozona."); 
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+return 0;
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+}
